@@ -33,7 +33,7 @@ For the first day, I did a few opcodes to test the waters:
 ### VM
 
 The most basic way to make a VM is to just make a switch inside a while loop. In psuedocode:
-```C
+```c
 while(true) {
   switch(operations[i]) {
     case OpX:
@@ -50,7 +50,7 @@ while(true) {
 While this approach works great for simpler usecases, it doesn't use the full power of today's CPUs. This is because it completely confuses the branch predictor, and it ends up unable to guess which is the next instruction before fetching it from memory.
 
 A better solution is to use a computed goto:
-```C
+```c
 jump_table = {
   &&label_OpX, // Take the labels by-address
   &&label_OpReturn,
@@ -74,13 +74,13 @@ Since computed goto does not work on MSVC, I implemented both approaches with a 
 
 I used a few macros while implementing the whole thing, most of which just help with not repeating things:
 
-```C
+```c
 #define CHECK_POINTER(pointer, size) if (pointer < stack || pointer - size > stack_pointer) return 2
 ```
 
 Additionally, I used a cool technique I learned about earlier, X macros. They allow us to have compile-time lists of stuff without having to repeat things everywhere. They look like this:
 
-```C
+```c
 // X isn't defined yet
 #define MY_LIST \
   X(item_1) \
