@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I decided to start a series of devlogs or articles about making a simple, interpreted, staticly-typed programming language, and potentially AOT/JIT-compiling it later on. It is inspired by [Aras's "Daily Pathtracer" series](), which is pretty cool; better check it out if you are interested in how pathtracers (such as Blender's Cycles) work.
+I decided to start a series of devlogs or articles about making a simple, interpreted, staticly-typed programming language, and potentially AOT/JIT-compiling it later on. It is inspired by [Aras's "Daily Pathtracer" series](http://aras-p.info/blog/2018/03/28/Daily-Pathtracer-Part-0-Intro/), which is pretty cool; better check it out if you are interested in how pathtracers (such as Blender's Cycles) work.
 
 At this point, I have no idea what the language would look like, so I'm going to start with a simple bytecode and VM, and later on work on the syntax. I would like to do something easily extensible, so that it can be tailored for different projects.
 

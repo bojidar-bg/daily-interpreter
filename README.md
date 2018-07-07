@@ -1,6 +1,6 @@
 # "Daily" interpreter
 
-A programming language and a series of articles inspired by [Aras's "Daily Pathtracer" series]().
+A programming language and a series of articles inspired by [Aras's "Daily Pathtracer" series](http://aras-p.info/blog/2018/03/28/Daily-Pathtracer-Part-0-Intro/).
 
 ## Running the code
 
